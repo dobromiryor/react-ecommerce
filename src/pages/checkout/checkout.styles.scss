@@ -23,9 +23,24 @@
     }
   }
 
+  .row{
+    display: flex;
+  }
+  .jc-sb{
+    justify-content: space-between;
+  }
+  .w-100p{
+    width: 100%;
+  }
+
   .total {
-    margin-top: 30px;
-    margin-left: auto;
+    display: flex;
+    flex-direction: column;;
+    margin-top: 4px;
     font-size: 36px;
+  }
+
+  .info{
+    font-size: 10px;
   }
 }
