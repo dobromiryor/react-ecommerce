@@ -9,7 +9,7 @@ import { emailSignInStart, googleSignInStart } from '../../redux/user/user.actio
 import { SignInContainer, SignInTitle, ButtonsBarContainer } from './sign-in.styles';
 
 const SignIn = ({ emailSignInStart, googleSignInStart }) => {
-  const [userCredentials, setUserCredentials] = useState({ email:'', password: '' })
+  const [userCredentials, setUserCredentials] = useState({ email: '', password: '' })
 
   const { email, password } = userCredentials;
   const handleSubmit = async e => {
@@ -20,17 +20,17 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
 
   const handleChange = (e) => {
     const { value, name } = e.target
-    setUserCredentials({...userCredentials, [name]: value })
+    setUserCredentials({ ...userCredentials, [name]: value })
   }
 
-  return(
+  return (
     <SignInContainer>
       <SignInTitle>I already have and account</SignInTitle>
       <span>Sign in with your email and password</span>
 
       <form onSubmit={handleSubmit}>
-        <FormInput name='email' type='email' label='email' value={email} handleChange={handleChange}  />
-        <FormInput name='password' type='password' label='password' value={password} handleChange={handleChange}  />
+        <FormInput name='email' type='email' label='Email' value={email} handleChange={handleChange} />
+        <FormInput name='password' type='password' label='Password' value={password} handleChange={handleChange} />
         <ButtonsBarContainer>
           <CustomButton type='submit'> Sign in </CustomButton>
           <CustomButton type='button' onClick={googleSignInStart} isGoogleSignIn> Sign in with Google </CustomButton>

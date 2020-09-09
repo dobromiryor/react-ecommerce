@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components';
 
-const subColor = 'grey';
-const mainColor = 'black';
+const subColor = '#333';
+const mainColor = '#ccc';
 
 const shrinkLabelStyles = css`
-  top: -14px;
+  top: -18px;
   font-size: 12px;
   color: ${mainColor};
 `;
@@ -35,6 +35,11 @@ export const FormInputContainer = styled.input`
   &:focus ~ label {
     ${shrinkLabelStyles}
   }
+  @media (prefers-color-scheme: dark){
+    background-color: ${subColor};
+    color: ${mainColor};
+    border-bottom: 1px solid ${mainColor};
+  }
 `;
 
 export const FormInputLabel = styled.label`
@@ -48,5 +53,9 @@ export const FormInputLabel = styled.label`
   transition: 300ms ease all;
   &.shrink {
     ${shrinkLabelStyles}
+  }
+
+  @media (prefers-color-scheme: dark){
+    color: ${mainColor};
   }
 `;

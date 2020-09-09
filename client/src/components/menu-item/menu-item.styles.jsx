@@ -32,6 +32,20 @@ export const MenuItemContainer = styled.div`
   &:last-child {
     margin-left: 7.5px;
   }
+
+  @media screen and (max-width: 800px){
+    height: 200px;
+    min-width: 100%;
+    margin: 0 0 10px 0;
+
+    &:first-child {
+      margin-right: unset;
+    }
+
+    &:last-child {
+      margin-left: unset;
+    }
+  }
 `;
 
 export const BackgroundImageContainer = styled.div`
@@ -53,6 +67,12 @@ export const ContentContainer = styled.div`
   background-color: white;
   opacity: 0.7;
   position: absolute;
+
+
+  @media (prefers-color-scheme: dark){
+    background-color: #333;
+    color: #ccc;
+  }
 `;
 
 export const ContentTitle = styled.span`
@@ -60,6 +80,11 @@ export const ContentTitle = styled.span`
   margin-bottom: 6px;
   font-size: 22px;
   color: #4a4a4a;
+
+
+  @media (prefers-color-scheme: dark){
+    color: #ccc;
+  }
 `;
 
 export const ContentSubtitle = styled.span`

@@ -15,6 +15,10 @@ export const CartContainer = styled.div`
 export const ShoppingIcon = styled(ShoppingIconSVG)`
   width: 24px;
   height: 24px;
+
+  @media (prefers-color-scheme: dark){
+    filter: invert(66%)
+  }
 `;
 
 export const ItemCountContainer = styled.span`

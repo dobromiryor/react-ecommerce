@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 
 import CollectionItem from '../../components/collection-item/collection-item.component'
@@ -9,9 +9,14 @@ import { CollectionPageContainer, CollectionTitle, CollectionItemsContainer } fr
 
 const CollectionPage = ({ collections }) => {
   const { title, items } = collections
-  return(
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  return (
     <CollectionPageContainer>
-      <CollectionTitle>{title}</CollectionTitle>
+      <CollectionTitle>{title.toUpperCase()}</CollectionTitle>
       <CollectionItemsContainer>
         {
           items.map(item => <CollectionItem key={item.id} item={item} />)

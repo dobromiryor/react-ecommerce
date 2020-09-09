@@ -11,13 +11,13 @@ import { DirectoryMenuContainer } from './directory.styles';
 const Directory = ({ sections }) => (
   <DirectoryMenuContainer>
     {sections.map(({ id, ...otherSectionProps }) => (
-      <MenuItem key={id} { ...otherSectionProps }/>
+      <MenuItem className='item' key={id} {...otherSectionProps} />
     ))}
   </DirectoryMenuContainer>
 )
 
 const mapStateToProps = createStructuredSelector({
-    sections: selectDirectorySections
+  sections: selectDirectorySections
 })
 
 export default connect(mapStateToProps)(Directory);

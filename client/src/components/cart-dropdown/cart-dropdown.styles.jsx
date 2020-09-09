@@ -13,6 +13,11 @@ export const CartDropdownContainer = styled.div`
   top: 90px;
   right: 40px;
   z-index: 5;
+
+  @media (prefers-color-scheme: dark){
+    background: #333;
+    color: #ccc;
+  }
 `;
 
 export const CartDropdownButton = styled(CustomButton)`

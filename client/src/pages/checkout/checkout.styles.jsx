@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CheckoutPageContainer = styled.div`
-  width: 55%;
+  width: 60%;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -10,6 +10,10 @@ export const CheckoutPageContainer = styled.div`
   button {
     margin-left: auto;
     margin-top: 35px;
+  }
+
+  @media screen and (max-width: 800px){
+    width: 95%;
   }
 `;
 
@@ -24,8 +28,17 @@ export const CheckoutHeaderContainer = styled.div`
 export const HeaderBlockContainer = styled.div`
   text-transform: capitalize;
   width: 23%;
+
   &:last-child {
     width: 8%;
+  }
+
+  @media screen and (max-width: 800px){
+    width: 20%;
+
+    &:last-child {
+      width: 11%;
+    }
   }
 `;
 
